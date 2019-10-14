@@ -13,7 +13,12 @@ var Post = mongoose.model("Post", postSchema);
 var userScherma = new mongoose.Schema({
     email: String,
     name: String,
-    posts: [postSchema]
+    posts: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Post"
+        }
+    ]
 });
 
 var User = mongoose.model("User", userScherma);

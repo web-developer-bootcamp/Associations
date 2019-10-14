@@ -18,24 +18,24 @@ var userScherma = new mongoose.Schema({
 
 var User = mongoose.model("User", userScherma);
 
-User.findOne({ name: 'Harry Potter' }, function (err, user) {
-    if (err) {
-        console.log(err)
-    } else {
-        user.posts.push({
-            title: '3 Thing I really hate',
-            content: 'Voldemort. Voldemort. Voldemort.'
-        });
+// User.findOne({ name: 'Harry Potter' }, function (err, user) {
+//     if (err) {
+//         console.log(err)
+//     } else {
+//         user.posts.push({
+//             title: '3 Thing I really hate',
+//             content: 'Voldemort. Voldemort. Voldemort.'
+//         });
 
-        user.save(function (err, user) {
-            if (err) {
-                console.log(err);
-            } else (
-                console.log(user)
-            )
-        });
-    }
-});
+//         user.save(function (err, user) {
+//             if (err) {
+//                 console.log(err);
+//             } else (
+//                 console.log(user)
+//             )
+//         });
+//     }
+// });
 
 // var newUser = new User({
 //     email: 'harry@hotmail.com',
